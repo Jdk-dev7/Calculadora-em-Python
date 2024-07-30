@@ -1,0 +1,69 @@
+#Calculadora pra Iniciantes
+#Desenvolvido por @Jdk.dev_
+
+
+#Funções das operaçoes
+def soma(x, y):
+  """Retorna a soma de dois números."""
+  return x + y
+
+def subtracao(x, y):
+  """Retorna a subtração de dois números."""
+  return x - y
+
+def multiplicacao(x, y):
+  """Retorna a multiplicação de dois números."""
+  return x * y
+
+def divisao(x, y):
+  """Retorna a divisão de dois números."""
+  if y == 0:
+    return "Divisão por zero não é permitida"
+  else:
+    return x / y
+#_______________________________________
+
+#Escolha das Operações
+while True:
+  print("Selecione a operação:")
+  print("'+' Soma")
+  print("'-' Subtração")
+  print("'*' Multiplicação")
+  print("'/' Divisão")
+  print("5. Sair")
+
+  escolha = input("Qual operação deseja? ")
+#_______________________________________
+
+#Funçoes das Operações2
+  if escolha in ('+', '-', '*', '/'):
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+
+    if escolha == '+':
+      print(num1, "+", num2, "=", soma(num1, num2))
+
+    elif escolha == '-':
+      print(num1, "-", num2, "=", subtracao(num1, num2))
+
+    elif escolha == '*':
+      print(num1, "*", num2, "=", multiplicacao(num1, num2))
+
+    elif escolha == '/':
+      print(num1, "/", num2, "=", divisao(num1, num2))
+#_______________________________________
+
+
+#Repetir ou parar a calculadora
+    continuar = input("Continuar realizando operações? (sim/não): ")
+    if continuar.lower() != 'sim':
+      break
+
+  elif escolha == '5':
+    break
+  else:
+    print("Entrada inválida")
+ #_______________________________________
+ 
+#Desenvolvido por @jdk.dev_
+#Obrigado por ler o código!!
